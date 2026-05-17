@@ -61,61 +61,6 @@ processing means complex transformations or data integration can be
 handled in a more programmatic and controlled manner before the data
 ever reaches Power BI.
 
-## Tools and Environments
-
-Several tools and environments have been chosen (or considered) to
-implement this system, each serving a distinct role in the overall
-solution:
-
--   **Python Environment:** Python is the backbone for data
-    processing. It was chosen for its strength in handling JSON and
-    performing data transformations. Common libraries likely used
-    include `requests` (for API calls to get JSON data), `pandas` (to
-    manipulate data and convert JSON to tables), and possibly
-    `zipfile` or `shutil` (to compress files into ZIP format). The
-    user may be writing and testing this Python code in an IDE like VS
-    Code or Jupyter notebooks. Python’s flexibility makes it ideal for
-    shaping the data exactly as needed by Power BI.\
--   **Power BI Desktop and Power Query:** Microsoft Power BI is the
-    platform for data visualization and analysis. Power BI Desktop is
-    used to set up the data model and design reports. Within Power BI,
-    **Power Query** is leveraged to connect to the output data – in
-    this case, reading from the CSV inside the ZIP produced by Python.
-    Power Query handles the extraction from the archive and loading
-    into the data model. Power BI was chosen for its robust
-    visualization capabilities and its ability to integrate with
-    various data sources (including flat files, web sources, and even
-    Python scripts if needed). Treating “Power BI as a development
-    platform” means using its features (like Power Query, DAX
-    calculations, and dashboards) not just for end reporting but as
-    integral components of the solution’s logic.\
--   **Version Control (Git) [Considered]:** The idea of using Git or
-    another version control system has been brought up to manage the
-    code and assets. While not yet fully implemented, adopting **Git**
-    could help track changes to the Python scripts (and even Power BI
-    project files) over time. This would ensure there is a history of
-    modifications, facilitate collaboration, and serve as a backup. In
-    a development-like environment, treating the configuration and
-    code as code artifacts is good practice. Storing the Python ETL
-    script in a Git repository, for example, would allow iterative
-    improvements and easy rollback if something breaks.\
--   **AI Assistants (GPT Chats):** Throughout this project, the user
-    has heavily utilized AI assistants (like ChatGPT) to support
-    development. Different chats have been used as “tools” for
-    different purposes – one for planning and architectural
-    brainstorming, others for coding help, debugging, or researching
-    specific questions. In effect, the collection of GPT chats has
-    acted as an extension of the development environment: writing
-    code, explaining concepts, and solving problems interactively.
-    This AI-assisted approach speeds up learning and prototyping.
-    However, it also introduces the challenge of **context
-    management** (discussed later) because each chat is siloed.
-
-By combining these tools – Python for ETL, Power BI for analytics,
-possibly Git for code management, and GPT for intelligent support –
-the user is assembling a custom development and analytics environment.
-Each component plays a role in achieving the vision of an automated,
-intelligent assistant system.
 
 ## Conceptual Themes and Vision
 
