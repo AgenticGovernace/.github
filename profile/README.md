@@ -25,12 +25,12 @@ steps:
 1.  **Data Retrieval (Extract):** Python 1pulls raw data in JSON
     format from a source (e.g. a web API or file). This could involve
     using libraries like `requests` to fetch data and `json` or pandas
-    to parse it.\
+    to parse it.
 2.  **Transformation to CSV (Transform):** The JSON data is processed
     and converted into structured tables (pandas DataFrames) which are
     then exported as CSV files. This step may include cleaning data,
     normalizing or flattening nested JSON structures, and selecting
-    the fields needed for analysis.\
+    the fields needed for analysis.
 3.  **Packaging Data as ZIP (Load Preparation):** The resulting CSV
     file(s) are compressed into a ZIP archive. The decision to use a
     ZIP archive is intentional – it dramatically reduces file size and
@@ -38,7 +38,7 @@ steps:
     instead of raw CSV, network load is reduced and Power BI’s dataset
     refresh times can improve notably[L129-L136]This benefit has been
     observed because CSVs compress well, and transferring one small
-    archive is faster than large text files.)\
+    archive is faster than large text files.)
 4.  **Power BI Consumption (Load):** Power BI (via Power Query or
     another connector) is set up to import the data from the ZIP
     archive. In practice, Power Query can be configured to read a CSV
@@ -84,7 +84,7 @@ the technical steps:
     development cycle. This concept aligns with modern BI practices
     where analysts and developers collaborate closely, and BI tools
     become a kind of low-code development environment for data-centric
-    applications.\
+    applications.
 -   **“Jarvis”-Like Assistant Vision:** A driving vision for the
     project is to create a personal life/business assistant
     reminiscent of **Jarvis** (Tony Stark’s AI from Iron Man). In
@@ -101,7 +101,7 @@ the technical steps:
     conversing with the user about the results (via an AI model). This
     theme underlines the project’s aim to blur the lines between a BI
     dashboard and an interactive AI assistant that helps in day-to-day
-    decision making.\
+    decision making.
 -   **AI-Driven Development Workflow:** The process of building this
     project has itself been augmented by AI, which is somewhat novel
     in software development. Instead of working solely in an IDE, the
@@ -149,7 +149,7 @@ Here are the key issues that have been encountered or are anticipated:
     might provide conflicting solutions or advice simply because they
     weren’t aware of the full picture discussed elsewhere. The user
     effectively became the “human glue” merging these separate streams
-    of thought.\
+    of thought.
 -   **Execution Tracking:** When implementation steps (like writing
     and running the Python code) are done in a different environment
     or chat from the planning, it can be hard to track progress. For
@@ -160,14 +160,14 @@ Here are the key issues that have been encountered or are anticipated:
     thread’s understanding. Keeping a mental or written track of which
     tasks are completed, which are pending, and what the outcomes were
     is challenging when spread across tools. This can lead to
-    confusion or overlooking of issues already solved.\
+    confusion or overlooking of issues already solved.
 -   **Context Switching Overhead:** Switching between different chats
     and tools introduces cognitive overhead. The user has to recall
     which chat contained which information and possibly juggle
     multiple windows. This context switching can slow down development
     and increases the chance of errors (like implementing something
     based on outdated assumptions from an earlier chat that was since
-    updated in a different chat).\
+    updated in a different chat).
 -   **Integration Complexity:** On the technical side, integrating
     Python and Power BI has its own challenges which were addressed in
     pieces. For instance, making sure Power BI can properly read the
@@ -367,7 +367,7 @@ previous insights, tasks, and developments holistically.
 3.  **Using ChatGPT itself to Merge**:
     -   Provide multiple chat logs as input to ChatGPT and explicitly
         request it to summarize and merge contexts into one cohesive
-        narrative.\
+        narrative.
     -   This approach leverages ChatGPT’s summarization capabilities
         directly.
 
